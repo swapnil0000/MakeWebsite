@@ -1,0 +1,118 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(background\ \(1\).png);
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width: 150px;
+    margin: 0 10px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.navbar ul li::after{
+    content: '';
+    width: 0%;
+    background: #ffc107;
+    height: 3px;
+    position: absolute;
+    transition: 0.5s;
+    bottom: -10px;
+    left: 0;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.tittle{
+    font-size: 70px;
+    line-height: 100px;
+    font-weight: bold;
+    height: 100px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.content p{
+    margin: 20px auto;
+    font-size: large;
+    font-weight: 100;
+    line-height: 25px;
+    font-family: sans-serif;
+}
+button{
+    padding: 15px 25px;
+    font-size: 16px;
+    margin: 20px;
+    letter-spacing: 1px;
+    border: 2px solid #ffc107;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+    background-size: 200px;
+    border-radius: 20%;
+    background-position: left;
+    transition:   background-position 0.5s;
+}
+button:hover{
+    background-position: right;
+    background: #ffc107;
+    color: #000;
+}
+.slicer{
+    color: #ffc107;
+    margin-left:12px;
+    box-sizing: border-box;
+    animation: slicer 6s linear infinite;
+}
+@keyframes slicer {
+    0%{
+        margin-top: -200px;
+    }
+    30%{
+        margin-top: -200px;
+    }
+    35%{
+        margin-top: 0px;
+    }
+    65%{
+        margin-top: 0px;
+    }
+    70%{
+        margin-top:  200px;
+    }
+    100%{
+        margin-top: 200px;
+    }
+}
+ 
+
